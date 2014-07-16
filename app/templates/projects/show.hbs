@@ -1,6 +1,8 @@
-<div class="project-container container">
-    <h1 class="project-name">{{name}}</h1>
+<div class="project-headline">
+  <h1 class="project-name">{{name}}</h1>
+</div>
 
+<div class="project-container container">
     <heading class="project-stats">
       <div>
         {{#if linkUrl}}
@@ -19,15 +21,16 @@
     </heading>
 
     {{#if screenshots}}
+    <hr>
     <div class="project-screenshots">
       {{#each screenshots}}
         <img class="screenshot" {{bind-attr src=this}} alt="screenshot">
       {{/each}}
     </div>
     {{/if}}
-
+<hr>
     <p>{{description}}</p>
-
+<hr>
     <div class="project-details">
       <div>
         <div class="contributors">
@@ -76,6 +79,7 @@
       </div>
     </div>
 
+<hr>
     <div class="project-links">
       <div class="project-ext-link"><a class="form-control btn btn-project" {{bind-attr href=codeUrl}}>
         <i class="octicon octicon-mark-github"></i> View project on Github

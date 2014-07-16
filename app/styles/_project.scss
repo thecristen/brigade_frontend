@@ -16,10 +16,16 @@
 .section-title {
   color: $cfa-red;
 }
+.project-headline {
+  padding: 30px 0;
+  background-color: #ccc;
+}
 
 // layout
 .project-container {
-  padding-top: 4rem;
+  margin: 0px auto;
+  width: 750px;
+  
   .project-description {
     font-size: 1.8rem;
     border-bottom: 1px solid #ccc;
@@ -52,6 +58,14 @@
     @include make-row;
     &> div {
       @include make-sm-column(6);
+      &> div {
+      padding: 0.25em 1em;
+      margin: 0.25em;
+      &> h2 {
+        margin-top: 0.25em;
+        font-size: 1em;
+      }
+      }
     }
 
     .skill {
@@ -88,6 +102,6 @@
 }
 
 .avatar {
-  @include square(60px);
+  @include square(50px);
   border-radius: $border-radius-base;
 }
